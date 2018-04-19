@@ -1,19 +1,28 @@
-## DNICµÄ×¢²á¡¢µÇÂ¼ÓëÊÚÈ¨·þÎñ
+# GracefulTearã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€[ä¸­æ–‡](README.zh-cn.md)
+
+Project GracefulTear Provides Registration, Login, and Authorization for [Erechtheion](https://github.com/dotnet-china/Erechtheion)
+
+## Summary
 
 * .NET CORE SDK >= 2.0
 * Visual Studio 2017 Community or JetBrains Rider 2017.3
 
-## ¿ª·¢ËµÃ÷
+## Development Guide
 
-* ÉèÖÃ DNIC.AccountCenter ÎªÆô¶¯ÏîÄ¿
-* ÔÚ Package Manager Console ÖÐÔËÐÐÈçÏÂÃüÁî
+* Set GracefulTear.Web as atartup project
+* Run the following command in the Package Manager Console
 
-		add-migration GracefulTear -c GracefulTearDbContext
-		add-migration Id4Configuration -c ConfigurationDbContext
-		add-migration Id4PersistedGrants -c PersistedGrantDbContext
+```
+add-migration GracefulTear -c GracefulTearDbContext
+add-migration Id4Configuration -c ConfigurationDbContext
+add-migration Id4PersistedGrants -c PersistedGrantDbContext
 
-* Ö´ÐÐ³É¹¦ºóÔÙÔËÐÐ
+```
 
-		update-database -Context GracefulTearDbContext
-		update-database -Context PersistedGrantDbMigration
-		update-database -Context ConfigurationDbMigration
+* Run the following command if success
+
+```
+update-database -Context GracefulTearDbContext
+update-database -Context PersistedGrantDbMigration
+update-database -Context ConfigurationDbMigration
+```
